@@ -10,14 +10,14 @@
 
   <body style="background-color: Black;">
     <img src="no-robot.png"><br>
-    <label style="color: Yellow; font-size=2.5rem;" for="digit">Ici:</label>
+    <label style="color: Yellow; font-size: 2.5rem;" for="digit">Ici:</label>
     <input type="number" id="digit" name="digit" min="1" max="9">
 
     <script>
         const inputField = document.getElementById('digit');
 
         inputField.addEventListener('input', function() {
-            if (this.value.trim() === "2") {
+            if (this.value.trim() === "5") {
                 window.location.href = "https://google.com"; 
             }
         });
