@@ -10,37 +10,19 @@
 
   <body style="background-color: Black;">
     <img src="no-robot.png"><br>
-    <h1>
-       <label style="color: Yellow;" for="digit">Ici:</label>
-    </h1>
+    <label style="color: Yellow; font-size=2.5rem;" for="digit">Ici:</label>
     <input type="number" id="digit" name="digit" min="1" max="9">
-    <button id="envoyerBtn">Envoyer</button>
-    <p id="errorMessage" style="color: Yellow;">Désolé, ROBOT!</p>
-    
+
     <script>
         const inputField = document.getElementById('digit');
-        const submitBtn = document.getElementById('envoyerBtn');
-        const errorElement = document.getElementById('errorMessage');
-        errorElement.style.display = 'none';
-      
-        function checkValueAndRedirect() {
-            if (inputField.value.trim() === "5") {
-                errorElement.style.display = 'none';
-                window.location.href = "https://google.com";
-            } else {
-                errorElement.style.display = 'block';
-            }
-        }
 
-        submitBtn.addEventListener('click', checkValueAndRedirect);
-
-        inputField.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                checkValueAndRedirect();
+        inputField.addEventListener('input', function() {
+            if (this.value.trim() === "2") {
+                window.location.href = "https://google.com"; 
             }
         });
-    </script>
 
+    </script>
 
   </body>
 </html>
