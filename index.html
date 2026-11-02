@@ -21,8 +21,8 @@
         const inputField = document.getElementById('digit');
         const submitBtn = document.getElementById('envoyerBtn');
         const errorElement = document.getElementById('errorMessage');
-
-        // Reusable redirect function
+        errorElement.style.display = 'none';
+      
         function checkValueAndRedirect() {
             if (inputField.value.trim() === "5") {
                 errorElement.style.display = 'none';
